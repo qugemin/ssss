@@ -6,8 +6,7 @@
 
 <script>
 //不修改111
-///dsad
-//dds
+//不修改2
 export default {
    name:"MyFooter",
    data(){
