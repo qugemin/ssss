@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/vue.js" type="text/javascript"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2 @click="ishot=!ishot" style="font-size: 88px">今天的天气{{ishot?'凉快':'炎热'}}</h2> 
+     <input type="number" v-model.number="age">//可以限制输入的时int类型 
+        <h2 v-once>{{n}}</h2> //值会变，页面展示不会变
+        <h2 >{{n}}</h2> /
+        <button @click="n++">n+1</button>
+    </div>
+<script>
+   Vue.filter('ss',function(value){
+      return value.slice(0,4);
+   })//全局过滤器，可以只展示前面4个数据 例如使用方式{{keword|ss}}
+    const vm=new Vue({
+        el:"#app",
+        data:{
+            ishot:false,
+            numbers:{
+                a:"",
+                b:"",
+            },
+            person:[],
+            keword:"",
+            n:1,
+            age:"",
+        },
+        watch:{
+           /* keword:{
+              immediate:true,
+              hanlder(val){
+                this.person=this.person.filters(p=>{
+                    return p.name.indexOf(val)!==-1
+                })
+              }
+                 
+             }, //检测做查询  */
+             n:{
+                    handler(value){
+                        console.log(value);
+                    }
+             },
+             ishot:{
+                handler(newvalue,oldValue){
+                    console.log(oldValue,newvalue);
+                }
+             },
+            numbers:{
+                deep:true,//深处检测
+                hanlder(){
+
+                },
+            }
+        },
+        
+    })
+</script>
+</body>
+</html>

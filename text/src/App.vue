@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import school from './components/school.vue'
+  import school from './components/lian/shcool.vue'
   import MyHeader from './components/MyHeader.vue'
   import MyList from './components/MyList.vue'
   import MyFooter from './components/MyFooter.vue'

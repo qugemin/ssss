@@ -18,7 +18,6 @@ export default {
       }
    },
    components:{MyItem},
-
      props:['todo'],
    }
 </script>
