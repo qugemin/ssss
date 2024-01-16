@@ -11,7 +11,7 @@
     
   </div>
 </template>
-
+11
 <script>
     import student from './components/lian/student.vue'
     import school from './components/lian/shcool.vue'
