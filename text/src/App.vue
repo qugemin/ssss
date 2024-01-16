@@ -13,6 +13,7 @@
 </template>
 
 <script>
+    import student from './components/lian/student.vue'
     import school from './components/lian/shcool.vue'
   import MyHeader from './components/MyHeader.vue'
   import MyList from './components/MyList.vue'
@@ -24,6 +25,7 @@
       MyHeader,
       MyList,
       MyFooter,
+      student,
          },
    data(){
     return {
