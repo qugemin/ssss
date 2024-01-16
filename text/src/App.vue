@@ -8,11 +8,12 @@
     <MyHeader :receive="receive"/>
     <MyList :todo="todo"/>
     <MyFooter/>
+    
   </div>
 </template>
 
 <script>
-  import school from './components/lian/shcool.vue'
+    import school from './components/lian/shcool.vue'
   import MyHeader from './components/MyHeader.vue'
   import MyList from './components/MyList.vue'
   import MyFooter from './components/MyFooter.vue'
@@ -23,7 +24,7 @@
       MyHeader,
       MyList,
       MyFooter,
-   },
+         },
    data(){
     return {
       msg:"你好",
